@@ -1,18 +1,66 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* ========================================================================== */
+
+
 body
 {
-    background-image: url("../IE7_hela.png");
-    background-position: top center;
-    background-repeat: no-repeat;
     background-color: #fcfaf4;
-    opacity: 0.8;
     font-size: 0;
-
 }
 #container
 {
     border:1px solid #cecab9;
     width: 600px;
-    margin: auto;
+    margin: 9px auto;
 }
 #topbar
 {
@@ -28,20 +76,55 @@ body
     color: #eae7d2;
     font-style: italic;
     line-height: 2;
+    padding-right:5px;
 }
 /*  Menu   */
+
 #menu
 {
     background-color: #51473d;
+    padding-top: 5px;
+
+}
+#menu ul
+{
+    width:100%;
+    border-bottom: 1px solid #ffffff;
 }
 #menu li
 {
-    display: inline-block;
+    display: inline;
+}
+#menu li:first-child
+{
+    margin-left: 10px;   
 }
 #menu a
 {
-    font-size: 16px;
+    display: inline-block;
+    background-color: #797066;
+    font-size: 13px;
     color: #eae7d2;
+    padding: 8px 20px 8px 19px;
+    border-right: 1px solid #51473d;
+    font-family: verdana;
+    text-decoration: none;
+    border-top: 1px solid #847c73;
+}
+#menu li.active a
+{
+    background-color: #eae7d2;
+    color: #797066;
+    border-bottom: 1px solid #eae7d2;
+    margin-bottom: -1px;
+}
+#menu a:first-letter
+{
+    text-transform:uppercase;
+}
+#menu>a
+{
+    display: none;
 }
 #content
 {
@@ -50,20 +133,20 @@ body
 }
 #maincontent
 {
-    width: 350px;
+    width: 348px;
     font-size: 16px;
     display: inline-block;
-    border-right: 1px dashed #000;
     vertical-align: top;
     padding: 10px;
 }
 #maincontent img
 {
     float: left;
+    margin: 5px 5px 0 0;
 }
 #subcontent
 {
-    width: 200px;
+    width: 211px;
     font-size: 16px;
     display: inline-block;
     vertical-align: top;
@@ -71,30 +154,34 @@ body
 }
 #maincontent h1
 {
-    font-size: 29px;
+    font-size: 31px;
     font-family: times;
     line-height: 1;
     margin-bottom: 10px;
-    margin-top: 12px;
+    margin-top: 11px;
     color: #797066;
 }
 #maincontent p
 {
-    line-height:2;
-    font-size: 12px;
+    padding-top: 5px;
+    line-height:1.55;
+    font-size: 13px;
     font-family: verdana;
     color: #797066;
+    border-right: 1px dashed #000;
 }
 #subcontent h1
 {
     font-size: 16px;
     font-family: times;
     margin-top: 19px;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
 }
 #subcontent h2
 {
     font-size: 14px;
+    margin-top: 28px;
+    margin-bottom: 3px;
 }
 #subcontent p
 {
@@ -108,14 +195,13 @@ body
     font-style: italic;
     font-size: 12px;
     font-family: times;
-    margin-top: -15px;
     color: #797066;
+    padding-bottom: 10px;
 }
-ul
+#subcontent a
 {
-    list-style-type: none;
-}
-li a
-{
+    font-size:13px;
     color: #000000;
+    line-height: 1.53;
+    font-family: verdana;
 }
